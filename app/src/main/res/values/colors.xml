@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#673AB7</color>
+  <color name="colorPrimaryDark">#512DA8</color>
+  <color name="colorAccent">#ffffff</color>
+
+  <color name="main_background_color">#efefef</color>
+  <color name="main_card_color">#fafafa</color>
+  <color name="main_welcome_color">#4D000000</color>
+  <color name="hint_text_color">#9c9c9c</color>
+
+  <color name="drawer_background_color">#ffffff</color>
+  <color name="drawer_menu_unselected_color">#bfbfbf</color>
+  <color name="drawer_menu_text_color">#212121</color>
+
+  <color name="property_item_hint_color">#737373</color>
+  <color name="property_item_text_color">#4b4b4b</color>
+  <color name="property_item_line_color">#e0e0e0</color>
+
+  <color name="text_color">#949494</color>
+</resources>

@@ -1,0 +1,35 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:2.2.3'
+    classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
+    classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'
+  }
+}
+
+allprojects {
+  repositories {
+    jcenter()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}
+
+ext {
+  // Sdk and tools
+  minSdkVersion = 16
+  targetSdkVersion = 25
+  compileSdkVersion = 25
+  buildToolsVersion = '25.0.2'
+  versionCode = 1
+  versionName = "1.0"
+
+  applicationId = "mk.petrovski.weathergurumvp"
+}

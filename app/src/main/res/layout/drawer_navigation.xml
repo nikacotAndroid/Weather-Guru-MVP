@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigation_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="false"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/drawer_background_color"
+      >
+
+    <RelativeLayout
+        android:id="@+id/header_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_header_height"
+        android:background="@color/drawer_background_color"
+        android:orientation="vertical"
+        >
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scaleType="centerCrop"
+          android:src="@drawable/ic_header"
+          />
+
+      <ImageView
+          android:id="@+id/image_add"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:padding="@dimen/drawer_add_btn_padding"
+          android:src="@drawable/ic_city_add"
+          />
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:background="@color/main_welcome_color"
+          android:padding="7dp"
+          >
+
+        <TextView
+            android:id="@+id/txt_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            />
+
+      </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_drawer"
+        >
+
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/recycler_view_menu"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:overScrollMode="never"
+          />
+
+      <TextView
+          android:id="@+id/txt_empty_locations"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:drawablePadding="12dp"
+          android:drawableTop="@drawable/ic_no_locations"
+          android:gravity="center"
+          android:text="@string/empty_locations"
+          android:textColor="@color/text_color"
+          android:visibility="gone"
+          fontPath="fonts/Roboto-Light.ttf"
+          />
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+
+</android.support.design.widget.NavigationView>

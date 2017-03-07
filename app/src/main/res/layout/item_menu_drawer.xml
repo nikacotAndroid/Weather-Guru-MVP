@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/drawer_background_color"
+    android:paddingBottom="@dimen/drawer_menu_item_margin_bottom"
+    android:paddingEnd="@dimen/drawer_menu_item_margin_left"
+    android:paddingLeft="@dimen/drawer_menu_item_margin_left"
+    android:paddingRight="@dimen/drawer_menu_item_margin_right"
+    android:paddingStart="@dimen/drawer_menu_item_margin_left"
+    android:paddingTop="@dimen/drawer_menu_item_margin_top"
+    >
+
+  <TextView
+      android:id="@+id/txt_drawer_city"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:drawablePadding="@dimen/drawer_menu_item_drawable_padding"
+      android:gravity="center_vertical"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:textColor="@color/drawer_menu_text_color"
+      fontPath="fonts/Roboto-Bold.ttf"
+      />
+
+</RelativeLayout>

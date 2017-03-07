@@ -1,0 +1,45 @@
+<resources>
+
+  <string name="app_name">Weather Guru</string>
+
+  <string name="screen_manage_cities">Manage Cities</string>
+  <string name="screen_no_locations">No Locations</string>
+
+  <string name="empty_locations">No locations added</string>
+  <string name="empty_results">No results</string>
+  <string name="empty_area">No area</string>
+  <string name="empty_country">No country</string>
+
+  <string name="txt_welcome_main" formatted="false">How is your day %s?</string>
+  <string name="txt_temp" formatted="false">%s°/%s°</string>
+  <string name="txt_rain" formatted="false">Chance of Rain: %s</string>
+  <string name="txt_powered_by">Powered by worldweatheronline</string>
+  <string name="txt_sunrise">Sunrise</string>
+  <string name="txt_sunset">Sunset</string>
+  <string name="txt_temp_value" formatted="false">%s°</string>
+  <string name="txt_wind_value" formatted="false">%skmph %s°</string>
+  <string name="txt_visibility_value" formatted="false">%s km</string>
+  <string name="txt_percentage_value" formatted="false">%s %%</string>
+  <string name="txt_search_city">Search for city</string>
+
+  <string name="error_server">Server error</string>
+  <string name="error_server_not_available">Server not available</string>
+  <string name="error_not_found">Not found. Please try again.</string>
+  <string name="error_default">Error occurred: %s</string>
+  <string name="error_unauthorized">Unauthorized access</string>
+  <string name="error_connection">Please check your internet connection</string>
+  <string name="error_multiple_city">Selected city already exists</string>
+  <string name="error_weather">No weather data</string>
+  <string name="error_username">Please insert your name</string>
+
+  <string name="hint_feels_like">Feels Like</string>
+  <string name="hint_chance_of_rain">Chance of Rain</string>
+  <string name="hint_wind">Wind</string>
+  <string name="hint_humidity">Humidity</string>
+  <string name="hint_visibility">Visibility</string>
+  <string name="hint_city_name">city name</string>
+  <string name="hint_enter_your_name">Enter your name</string>
+
+  <string name="btn_show_weather">SHOW WEATHER</string>
+
+</resources>

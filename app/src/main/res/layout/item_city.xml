@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="@dimen/item_city_layout_padding"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_toLeftOf="@+id/btn_delete"
+      android:layout_toStartOf="@+id/btn_delete"
+      android:orientation="vertical"
+      >
+
+    <TextView
+        android:id="@+id/txt_area_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/property_item_text_color"
+        />
+
+    <TextView
+        android:id="@+id/txt_country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/property_item_hint_color"
+        />
+
+  </LinearLayout>
+
+  <ImageView
+      android:id="@+id/btn_delete"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:src="@drawable/ic_delete"
+      />
+
+</RelativeLayout>

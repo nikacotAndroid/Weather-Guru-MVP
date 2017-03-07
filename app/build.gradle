@@ -1,0 +1,127 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+  defaultConfig {
+    applicationId rootProject.ext.applicationId
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode rootProject.ext.versionCode
+    versionName rootProject.ext.versionName
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+
+  signingConfigs {
+    release {
+      storeFile file("$weatherGuruKeystoreReleaseLocation")
+      keyAlias "${weatherGuruReleaseKeyAlias}"
+      storePassword "${weatherGuruReleaseStorePassword}"
+      keyPassword "${weatherGuruReleaseKeyPassword}"
+    }
+  }
+
+  packagingOptions {
+    exclude 'LICENSE.txt'
+    exclude 'META-INF/DEPENDENCIES'
+    exclude 'META-INF/ASL2.0'
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/LICENSE'
+    exclude 'META-INF/rxjava.properties'
+  }
+
+  buildTypes {
+    release {
+      debuggable false
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      signingConfig signingConfigs.release
+
+      buildConfigField "String", "WWO_API_KEY", "${wwoApiKeyValue}"
+    }
+
+    debug {
+      debuggable true
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      versionNameSuffix " Debug"
+
+      buildConfigField "String", "WWO_API_KEY", "${wwoApiKeyValue}"
+    }
+  }
+}
+
+dependencies {
+  final SUPPORT_LIBRARY_VERSION = '25.2.0'
+  final RETROFIT_VERSION = '2.1.0'
+  final RETROFIT_RXJAVA_ADAPTER = '1.0.0'
+  final TIMBER_VERSION = '4.3.1'
+  final OK_HTTP_LOGGING_INTERCEPTOR_VERSION = '3.2.0'
+  final DAGGER_VERSION = '2.5'
+  final BUTTER_KNIFE_VERSION = '8.4.0'
+  final CALLIGRAPHY_VERSION = '2.2.0'
+  final JODA_TIME_VERSION = '2.9.1'
+  final GREEN_DAO = '3.2.0'
+  final RX_JAVA_2 = '2.0.5'
+  final RX_ANDROID = '2.0.1'
+  final RX_BINDINGS = '2.0.0-SNAPSHOT'
+  final EVENT_BUS = '3.0.0'
+  final LOTTIE_VERSION = '1.5.3'
+
+  def daggerCompiler = "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+  def jUnit = "junit:junit:4.12"
+
+  // Support
+  compile "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
+  compile "com.android.support:recyclerview-v7:$SUPPORT_LIBRARY_VERSION"
+  compile "com.android.support:cardview-v7:$SUPPORT_LIBRARY_VERSION"
+  compile "com.android.support:support-annotations:$SUPPORT_LIBRARY_VERSION"
+  compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
+
+  // Retrofit
+  compile "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+  compile "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
+  compile "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$RETROFIT_RXJAVA_ADAPTER"
+
+  // Timber
+  compile "com.jakewharton.timber:timber:$TIMBER_VERSION"
+  compile "com.squareup.okhttp3:logging-interceptor:$OK_HTTP_LOGGING_INTERCEPTOR_VERSION"
+
+  // Butter knife
+  compile "com.jakewharton:butterknife:$BUTTER_KNIFE_VERSION"
+  annotationProcessor "com.jakewharton:butterknife-compiler:$BUTTER_KNIFE_VERSION"
+
+  // Dagger
+  compile "com.google.dagger:dagger:$DAGGER_VERSION"
+  provided 'org.glassfish:javax.annotation:10.0-b28'
+  annotationProcessor daggerCompiler
+  testAnnotationProcessor daggerCompiler
+  androidTestAnnotationProcessor daggerCompiler
+
+  // RX
+  compile "io.reactivex.rxjava2:rxjava:$RX_JAVA_2"
+  compile "io.reactivex.rxjava2:rxandroid:$RX_ANDROID"
+  compile "com.jakewharton.rxbinding2:rxbinding:$RX_BINDINGS"
+
+  // Date Time
+  compile "joda-time:joda-time:$JODA_TIME_VERSION"
+
+  // UI
+  compile "uk.co.chrisjenx:calligraphy:$CALLIGRAPHY_VERSION"
+  compile "com.airbnb.android:lottie:$LOTTIE_VERSION"
+
+  // Database
+  compile "org.greenrobot:greendao:$GREEN_DAO"
+
+  // Bus
+  compile "org.greenrobot:eventbus:$EVENT_BUS"
+
+  // Tests
+  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
+
+  testCompile jUnit
+}

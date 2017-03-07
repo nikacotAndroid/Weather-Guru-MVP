@@ -1,0 +1,23 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="drawerArrowStyle">@style/MyDrawerArrowToggle</item>
+  </style>
+
+  <style name="MyDrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
+    <item name="color">@android:color/white</item>
+  </style>
+
+  <style name="SearchCityEditTextStyle" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorAccent">@android:color/white</item>
+    <item name="android:editTextStyle">@style/EditTextStyle</item>
+  </style>
+
+  <style name="EditTextStyle" parent="Widget.AppCompat.EditText"/>
+
+</resources>

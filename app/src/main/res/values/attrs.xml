@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="PropertyItemView">
+    <attr format="string" name="hintDescription"/>
+    <attr format="string" name="value"/>
+    <attr format="boolean" name="bottomLineVisibility"/>
+    <attr format="reference" name="iconDescription"/>
+  </declare-styleable>
+</resources>

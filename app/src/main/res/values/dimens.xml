@@ -1,0 +1,47 @@
+<resources>
+  <dimen name="activity_horizontal_margin">16dp</dimen>
+  <dimen name="activity_vertical_margin">16dp</dimen>
+
+  <dimen name="welcome_screen_logo_height">280dp</dimen>
+  <dimen name="welcome_screen_image_size">120dp</dimen>
+
+  <dimen name="drawer_header_height">180dp</dimen>
+  <dimen name="drawer_add_btn_padding">15dp</dimen>
+  <dimen name="drawer_menu_item_margin_top">20dp</dimen>
+  <dimen name="drawer_menu_item_margin_bottom">20dp</dimen>
+  <dimen name="drawer_menu_item_margin_left">15dp</dimen>
+  <dimen name="drawer_menu_item_margin_right">15dp</dimen>
+  <dimen name="drawer_menu_item_drawable_padding">20dp</dimen>
+
+  <dimen name="manage_cities_main_search_layout_height">150dp</dimen>
+  <dimen name="manage_cities_main_search_layout_elevation">5dp</dimen>
+  <dimen name="manage_cities_main_search_layout_margin_left">65dp</dimen>
+  <dimen name="manage_cities_main_search_layout_margin_right">10dp</dimen>
+
+  <dimen name="item_property_layout_height">70dp</dimen>
+  <dimen name="item_property_icon_margin_right">30dp</dimen>
+  <dimen name="item_property_line_margin_left">50dp</dimen>
+
+  <dimen name="autocomplete_item_padding_left">20dp</dimen>
+  <dimen name="autocomplete_item_padding_right">20dp</dimen>
+  <dimen name="autocomplete_item_padding_top_bottom">10dp</dimen>
+
+  <dimen name="single_day_layout_desc_height">220dp</dimen>
+  <dimen name="single_day_layout_corner_radius">2dp</dimen>
+  <dimen name="single_day_layout_elevation">5dp</dimen>
+  <dimen name="single_day_layout_content_padding">20dp</dimen>
+  <dimen name="single_day_layout_city_name_text_size">28sp</dimen>
+  <dimen name="single_day_layout_weather_info_text_size">18sp</dimen>
+  <dimen name="single_day_layout_temp_value_text_size">63sp</dimen>
+  <dimen name="single_day_layout_powered_by_padding">20dp</dimen>
+
+  <dimen name="item_city_layout_padding">25dp</dimen>
+
+  <dimen name="item_day_desc_height">220dp</dimen>
+  <dimen name="item_day_day_text_size">28sp</dimen>
+  <dimen name="item_day_weather_info_text_size">16sp</dimen>
+  <dimen name="item_day_original_date_text_size">16sp</dimen>
+  <dimen name="item_day_temp_value_text_size">46sp</dimen>
+  <dimen name="item_day_chance_rain_text_size">16sp</dimen>
+
+</resources>

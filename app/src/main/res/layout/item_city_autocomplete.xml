@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingBottom="@dimen/autocomplete_item_padding_top_bottom"
+    android:paddingEnd="@dimen/autocomplete_item_padding_right"
+    android:paddingLeft="@dimen/autocomplete_item_padding_left"
+    android:paddingRight="@dimen/autocomplete_item_padding_right"
+    android:paddingStart="@dimen/autocomplete_item_padding_left"
+    android:paddingTop="@dimen/autocomplete_item_padding_top_bottom"
+    >
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:orientation="vertical"
+      >
+
+    <TextView
+        android:id="@+id/txt_area_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/property_item_text_color"
+        />
+
+    <TextView
+        android:id="@+id/txt_country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/property_item_hint_color"
+        />
+  </LinearLayout>
+
+</RelativeLayout>

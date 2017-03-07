@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/welcome_screen_logo_height"
+      >
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:lottie_fileName="animation/start_logo_animation.json"
+        app:lottie_loop="false"
+        />
+
+    <ImageView
+        android:id="@+id/image_welcome"
+        android:layout_width="@dimen/welcome_screen_image_size"
+        android:layout_height="@dimen/welcome_screen_image_size"
+        android:layout_centerInParent="true"
+        android:alpha="0"
+        android:src="@drawable/ic_welcome"
+        />
+
+  </RelativeLayout>
+
+
+  <RelativeLayout
+      android:id="@+id/layout_user_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:alpha="0"
+      android:visibility="gone"
+      >
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="25dp"
+        >
+
+      <EditText
+          android:id="@+id/edit_text_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/hint_enter_your_name"
+          android:textColor="@android:color/white"
+          android:textColorHint="@android:color/white"
+          />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_show_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_input_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:text="@string/btn_show_weather"
+        android:textColor="@android:color/black"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+  </RelativeLayout>
+
+</RelativeLayout>
