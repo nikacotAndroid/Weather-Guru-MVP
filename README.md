@@ -13,6 +13,34 @@ The application is built with MVP architectural approach and uses [World Weather
   <img src="https://github.com/nikacotAndroid/Weather-Guru-MVP/blob/master/art/6.png" width="280">
 </p>
 
+
+## Project Structure
+### data 
+It contains all the data(Shared Preferences, Local DB and Remote API) accessing and manipulating components
+### injection
+Dependency providing classes using Dagger2
+### events
+EventBus events classes that simplifies communication between Activitie and Fragments
+### ui
+View classes along with their corresponding Presenters
+### utils
+Utility classes
+
+
+## Code Style
+This sample project uses the IntelliJ IDEA [code style settings for Square's Java and Android projects](https://github.com/square/java-code-styles).
+
+## Library reference resources
+- Support library
+- [RxJava2](https://github.com/ReactiveX/RxJava), [RxAndroid](https://github.com/ReactiveX/RxAndroid) and [RxBindings](https://github.com/JakeWharton/RxBinding)
+- [Dagger2](https://google.github.io/dagger/)
+- [Retrofit2](http://square.github.io/retrofit/)
+- [GreenDao](http://greenrobot.org/greendao/)
+- [Butterknife](https://github.com/JakeWharton/butterknife)
+- [Greenrobot EventBus](http://greenrobot.org/eventbus/)
+- [Lottie-Android](https://github.com/airbnb/lottie-android)
+- [Timber](https://github.com/JakeWharton/timber)
+
 # Contributing
 Make pull request and you are IN!
 
