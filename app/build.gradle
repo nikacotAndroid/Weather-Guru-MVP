@@ -66,7 +66,7 @@ dependencies {
   final GREEN_DAO = '3.2.0'
   final RX_JAVA_2 = '2.0.5'
   final RX_ANDROID = '2.0.1'
-  final RX_BINDINGS = '2.0.0-SNAPSHOT'
+  final RX_BINDINGS = '2.0.0'
   final EVENT_BUS = '3.0.0'
   final LOTTIE_VERSION = '1.5.3'
 
