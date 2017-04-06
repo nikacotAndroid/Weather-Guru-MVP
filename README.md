@@ -41,6 +41,10 @@ This sample project uses the IntelliJ IDEA [code style settings for Square's Jav
 - [Lottie-Android](https://github.com/airbnb/lottie-android)
 - [Timber](https://github.com/JakeWharton/timber)
 
+## Testing reference resources
+- [Mockito](http://site.mockito.org/)
+- [Robolectric](http://robolectric.org/) 
+
 # Contributing
 Make pull request and you are IN!
 
