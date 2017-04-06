@@ -51,6 +51,16 @@ android {
       buildConfigField "String", "WWO_API_KEY", "${wwoApiKeyValue}"
     }
   }
+
+  sourceSets {
+    def commonTestDir = 'src/commonTest/java'
+    test {
+      java.srcDir commonTestDir
+    }
+    androidTest {
+      java.srcDir commonTestDir
+    }
+  }
 }
 
 dependencies {
@@ -69,9 +79,11 @@ dependencies {
   final RX_BINDINGS = '2.0.0'
   final EVENT_BUS = '3.0.0'
   final LOTTIE_VERSION = '1.5.3'
+  final J_UNIT_VERSION = '4.12'
+  final MOCKITO_VERSION = '2.7.1'
+  final ROBOLECTRIC_VERSION = '3.3.2'
 
   def daggerCompiler = "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
-  def jUnit = "junit:junit:4.12"
 
   // Support
   compile "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
@@ -123,5 +135,7 @@ dependencies {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
 
-  testCompile jUnit
+  testCompile "junit:junit:$J_UNIT_VERSION"
+  testCompile "org.mockito:mockito-core:$MOCKITO_VERSION"
+  testCompile "org.robolectric:robolectric:$ROBOLECTRIC_VERSION"
 }

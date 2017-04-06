@@ -8,7 +8,7 @@ import java.io.IOException;
 import mk.petrovski.weathergurumvp.data.remote.ApiConsts;
 import mk.petrovski.weathergurumvp.data.remote.ApiHelper;
 import mk.petrovski.weathergurumvp.data.remote.ApiInterface;
-import mk.petrovski.weathergurumvp.data.remote.BaseApiHelper;
+import mk.petrovski.weathergurumvp.data.remote.AppApiHelper;
 import mk.petrovski.weathergurumvp.data.remote.helper.HeaderHelper;
 import mk.petrovski.weathergurumvp.data.remote.helper.error.ErrorHandlerHelper;
 import mk.petrovski.weathergurumvp.injection.qualifier.ApplicationContext;
@@ -79,7 +79,8 @@ import timber.log.Timber;
     return new ErrorHandlerHelper(context, retrofit);
   }
 
-  @Provides @WeatherGuruApplicationScope public BaseApiHelper apiHelper(ApiInterface apiInterface) {
-    return new ApiHelper(apiInterface);
+  @Provides @WeatherGuruApplicationScope
+  public ApiHelper apiHelper(ApiInterface apiInterface, ErrorHandlerHelper errorHandlerHelper) {
+    return new AppApiHelper(apiInterface, errorHandlerHelper);
   }
 }

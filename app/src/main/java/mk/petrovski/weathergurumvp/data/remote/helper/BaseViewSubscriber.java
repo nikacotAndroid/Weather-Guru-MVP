@@ -1,12 +1,9 @@
 package mk.petrovski.weathergurumvp.data.remote.helper;
 
 import io.reactivex.observers.DisposableObserver;
-import javax.inject.Inject;
-import mk.petrovski.weathergurumvp.WeatherGuruApplication;
 import mk.petrovski.weathergurumvp.data.remote.helper.error.ErrorHandlerHelper;
 import mk.petrovski.weathergurumvp.data.remote.helper.error.InternetConnectionException;
 import mk.petrovski.weathergurumvp.ui.base.BaseMvpView;
-import mk.petrovski.weathergurumvp.utils.AppUtils;
 
 /**
  * Created by Nikola Petrovski on 2/22/2017.
@@ -18,14 +15,12 @@ import mk.petrovski.weathergurumvp.utils.AppUtils;
 
 public class BaseViewSubscriber<V extends BaseMvpView, T> extends DisposableObserver<T> {
 
-  // TODO why can not inject with dagger??
+  private V view;
   private ErrorHandlerHelper errorHandlerHelper;
 
-  private V view;
-
-  public BaseViewSubscriber(V view) {
+  public BaseViewSubscriber(V view, ErrorHandlerHelper errorHandlerHelper) {
     this.view = view;
-    errorHandlerHelper = WeatherGuruApplication.getApplicationComponent().errorHelper();
+    this.errorHandlerHelper = errorHandlerHelper;
   }
 
   public V getView() {
@@ -41,7 +36,7 @@ public class BaseViewSubscriber<V extends BaseMvpView, T> extends DisposableObse
   }
 
   @Override public void onStart() {
-    if (!AppUtils.isNetworkAvailable(WeatherGuruApplication.getApplicationComponent().context())) {
+    if (!view.isNetworkConnected()) {
       onError(new InternetConnectionException());
       return;
     }

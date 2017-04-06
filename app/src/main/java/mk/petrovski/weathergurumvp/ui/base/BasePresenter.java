@@ -2,9 +2,7 @@ package mk.petrovski.weathergurumvp.ui.base;
 
 import android.support.annotation.NonNull;
 import javax.inject.Inject;
-import mk.petrovski.weathergurumvp.data.local.preferences.ApplicationPreferences;
-import mk.petrovski.weathergurumvp.data.local.db.DbHelper;
-import mk.petrovski.weathergurumvp.data.remote.ApiHelper;
+import mk.petrovski.weathergurumvp.data.DataManager;
 import mk.petrovski.weathergurumvp.data.remote.helper.CompositeDisposableHelper;
 
 /**
@@ -14,17 +12,13 @@ import mk.petrovski.weathergurumvp.data.remote.helper.CompositeDisposableHelper;
  */
 public class BasePresenter<V extends BaseMvpView> implements Presenter<V> {
 
-  @Inject CompositeDisposableHelper compositeDisposableHelper;
+  CompositeDisposableHelper compositeDisposableHelper;
+  DataManager dataManager;
 
-  DbHelper dbHelper;
-  ApplicationPreferences applicationPreferences;
-  ApiHelper apiHelper;
-
-  @Inject protected BasePresenter(DbHelper dbHelper, ApplicationPreferences applicationPreferences,
-      ApiHelper apiHelper) {
-    this.dbHelper = dbHelper;
-    this.applicationPreferences = applicationPreferences;
-    this.apiHelper = apiHelper;
+  @Inject
+  public BasePresenter(CompositeDisposableHelper compositeDisposableHelper, DataManager dataManager) {
+    this.compositeDisposableHelper = compositeDisposableHelper;
+    this.dataManager = dataManager;
   }
 
   private V mvpView;
@@ -57,20 +51,16 @@ public class BasePresenter<V extends BaseMvpView> implements Presenter<V> {
     }
   }
 
-  public DbHelper getDbHelper() {
-    return dbHelper;
-  }
-
-  public ApplicationPreferences getApplicationPreferences() {
-    return applicationPreferences;
-  }
-
-  public ApiHelper getApiHelper() {
-    return apiHelper;
+  public DataManager getDataManager() {
+    return dataManager;
   }
 
   public CompositeDisposableHelper getCompositeDisposableHelper() {
     return compositeDisposableHelper;
+  }
+
+  public void setCompositeDisposableHelper(CompositeDisposableHelper compositeDisposableHelper) {
+    this.compositeDisposableHelper = compositeDisposableHelper;
   }
 }
 
